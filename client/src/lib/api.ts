@@ -1,0 +1,1 @@
+export async function api(path:string, options:RequestInit={}){const response=await fetch(path,{...options,headers:{"Content-Type":"application/json",...(options.headers||{})}});const data=await response.json().catch(()=>null);if(!response.ok)throw new Error(data?.error||"Permintaan gagal.");return data}

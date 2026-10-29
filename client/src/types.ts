@@ -1,0 +1,1 @@
+export type User={name:string,email:string,email_verified_at:string|null,whatsapp_number:string|null,whatsapp_opt_in_at:string|null}; export type Entry={activity:string,learning:string,obstacles:string,ai_generated_at?:string}; export type Day={date:string,status:string,reason:string}; export type Toast={type:"success"|"error";message:string}|null;

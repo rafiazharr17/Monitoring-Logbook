@@ -1,0 +1,2 @@
+import assert from "node:assert/strict"; import test from "node:test"; import { calendarStatus } from "../src/lib/calendar.js";
+test("calendar status follows WIB rules",()=>{const now=new Date("2026-10-29T10:00:00Z");assert.deepEqual(calendarStatus("2026-10-28",false,now),{status:"red",reason:"missed"});assert.deepEqual(calendarStatus("2026-10-31",false,now),{status:"gray",reason:"weekend"});assert.deepEqual(calendarStatus("2026-10-30",false,now),{status:"gray",reason:"future"});assert.deepEqual(calendarStatus("2026-10-28",true,now),{status:"green",reason:"saved"});});

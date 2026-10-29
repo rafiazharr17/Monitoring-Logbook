@@ -1,0 +1,2 @@
+import { Calendar } from "../components/Calendar"; import { today } from "../lib/date"; import type { Toast, User } from "../types";
+export function DashboardPage({user,onWrite,onPick,notify}:{user:User;onWrite:()=>void;onPick:(date:string)=>void;notify:(toast:NonNullable<Toast>)=>void}){return <><section className="intro"><p>Halo, {user.name}.</p><h1>Hari kerja Anda, tercatat jelas.</h1><p>{today()} WIB. Simpan tiga isian untuk menandai hari ini selesai.</p><button onClick={onWrite}>Isi logbook hari ini</button></section><Calendar onPick={onPick} notify={notify}/></>}

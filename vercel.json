@@ -1,0 +1,7 @@
+{
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }],
+  "crons": [
+    { "path": "/api/internal/reminders/run?slot=15:00", "schedule": "0 8 * * 1-5" },
+    { "path": "/api/internal/reminders/run?slot=19:00", "schedule": "0 12 * * 1-5" }
+  ]
+}
